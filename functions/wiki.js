@@ -13,8 +13,9 @@ async function searchArtist(artistName)
             //console.log(page)
         }
         page = page.split('\n');
-        console.log(page[0]);
+        //console.log(page[0]);
         return page[0]
 } 
 
-searchArtist('Leonardo_da_Vinci');
+//searchArtist('Leonardo_da_Vinci');
+exports.wiki = searchArtist;

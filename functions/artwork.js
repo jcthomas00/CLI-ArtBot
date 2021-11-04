@@ -25,9 +25,8 @@ async function getArtInfo(pageNum) {
     {
         console.log(e);
     }
-    for(let arts of listOfArt)
-        console.log(arts);
+    //for(let arts of listOfArt)
+        //console.log(arts);
     return listOfArt;
 }
-
-getArtInfo(2)
+exports.getArtInfo = getArtInfo;
