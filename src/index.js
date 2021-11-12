@@ -9,7 +9,7 @@ let pageNum = 1;
 const getArt = async (name) =>{
     let data = await getWiki(name);
     console.log(data);
-    input = prompt(`Enter B to go back`).toLowerCase();
+    input = prompt(`Enter B to go back `).toLowerCase();
     if(input==='b'){
         getPage(pageNum);
     }
@@ -24,9 +24,11 @@ const getPage = async (pageNum) =>{
         pageNum++;
         getPage(pageNum);
     }
-    if(input>='1' && input<='12'){
+    else if(input>=1 && input<=12){
         console.log(`\n${page[Number(input)-1].artists[0]}\n`);
         getArt(page[Number(input)-1].artists[0].replace(' ','_'));
+    }else{
+        console.log('Invalid Response')
     }
 } 
 
